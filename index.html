@@ -52,6 +52,12 @@
 .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem; }
 .why-num { font-size: 42px; font-family: 'DM Serif Display', serif; color: #e8effe; font-weight: 400; margin-bottom: 0.5rem; line-height: 1; }
 .why-title { font-size: 18px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 0.5rem; word-break: keep-all; }
+.insight-card { display: block; margin-top: 2rem; border: 0.5px solid var(--color-border-tertiary, #d9d9d9); border-radius: var(--border-radius-lg, 12px); color: inherit; padding: 1.75rem; max-width: 640px; text-decoration: none; transition: border-color 0.2s; }
+.insight-card:hover { border-color: #0c48bf; }
+.insight-tag { font-size: 13px; color: #E8630A; margin-bottom: 0.5rem; }
+.insight-title { font-size: 20px; font-weight: 500; color: var(--color-text-primary, #0a0a0a); margin-bottom: 0.5rem; word-break: keep-all; }
+.insight-desc { font-size: 15px; color: var(--color-text-secondary, #6b6b6b); line-height: 1.8; font-weight: 300; word-break: keep-all; }
+.insight-link { font-size: 14px; font-weight: 500; color: #0c48bf; margin-top: 1rem; }
 .why-desc { font-size: 14px; color: var(--color-text-secondary); line-height: 1.8; font-weight: 300; word-break: keep-all; max-width: 320px; }
 .contact-section { padding: 4rem 0; }
 .contact-inner { display: flex; flex-direction: column; align-items: flex-end; gap: 1.5rem; text-align: right; max-width: 1100px; margin: 0 auto; padding: 4rem 5rem; box-sizing: border-box; background: #0a0a0a; }
@@ -83,6 +89,7 @@
       <span class="nav-link" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth', block:'start'})">About</span>
       <span class="nav-link" onclick="document.getElementById('track').scrollIntoView({behavior:'smooth'})">Track Record</span>
       <span class="nav-link" onclick="document.getElementById('roadmap').scrollIntoView({behavior:'smooth', block:'start'})">Roadmap</span>
+      <span class="nav-link" onclick="document.getElementById('insights').scrollIntoView({behavior:'smooth', block:'start'})">Insights</span>
       <div class="lang-toggle">
       <button class="lang-btn active" onclick="setLang('ko')" id="btn-ko">KO</button>
       <button class="lang-btn" onclick="setLang('en')" id="btn-en">EN</button>
@@ -223,6 +230,16 @@
     </div>
   </div>
 
+  <div class="section" id="insights" style="scroll-margin-top: 80px;">
+    <div class="section-eyebrow" id="insights-eyebrow">Insights — 시장 리포트</div>
+    <a class="insight-card" href="insights/2027-beauty-brand-strategy.html">
+      <div class="insight-tag" id="insight1-tag">Market Report · 2026.11</div>
+      <div class="insight-title" id="insight1-title">2027 K-뷰티 브랜드 전략 리포트</div>
+      <div class="insight-desc" id="insight1-desc">미국·일본·한국 시장 데이터로 본 신규 화장품 브랜드의 카테고리와 진출 순서. 웹으로 보거나 PDF로 내려받을 수 있습니다.</div>
+      <div class="insight-link" id="insight1-link">리포트 보기 →</div>
+    </a>
+  </div>
+
   <div style="height: 1px; background: var(--color-border-tertiary);"></div>
   <div class="contact-section" id="contact">
     <div class="contact-inner">
@@ -296,6 +313,11 @@ const ko = {
   "why2-desc": "기구 설계·양산 공정까지 이해하는 마케터는 드뭅니다. 개발 초기부터 팔리는 구조를 설계합니다.",
   "why3-title": "트렌드 감지 센서",
   "why3-desc": "시장에서의 고객 반응을 실시간으로 수집·반영합니다. 좋은 기술을 사람들이 원하는 브랜드로 만드는 것, 그게 제 일입니다.",
+  "insights-eyebrow": "Insights — 시장 리포트",
+  "insight1-tag": "Market Report · 2026.11",
+  "insight1-title": "2027 K-뷰티 브랜드 전략 리포트",
+  "insight1-desc": "미국·일본·한국 시장 데이터로 본 신규 화장품 브랜드의 카테고리와 진출 순서. 웹으로 보거나 PDF로 내려받을 수 있습니다.",
+  "insight1-link": "리포트 보기 →",
   "contact-title": "함께 시작할 준비가 되셨나요?",
   "contact-sub": "브랜드 런칭을 검토하고 계신다면 편하게 연락 주세요.",
   "consulting-btn": "컨설팅 신청서 ↗",
@@ -349,6 +371,11 @@ const en = {
   "why2-desc": "Few marketers understand manufacturing and production processes. I design a sellable structure from the very beginning of development.",
   "why3-title": "Trend detection sensor",
   "why3-desc": "I collect and reflect real-time customer responses from the market. Turning great ideas into brands people actually want — that is my job.",
+  "insights-eyebrow": "Insights — Market Reports",
+  "insight1-tag": "Market Report · Nov 2026",
+  "insight1-title": "2027 K-Beauty Brand Strategy Report",
+  "insight1-desc": "Which category, which market, in what order — a data-led view of the US, Japan and Korea for new beauty brands. Read online or download the PDF.",
+  "insight1-link": "Read the report →",
   "contact-title": "Ready to start together?",
   "contact-sub": "If you are considering a brand launch, feel free to reach out.",
   "consulting-btn": "Consulting Form ↗",
